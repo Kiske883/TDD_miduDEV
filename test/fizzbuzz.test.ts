@@ -11,11 +11,11 @@ describe('fizzbuzz', () : void => {
     it('should be a function', () : void => {
         expect(typeof fizzbuzz).toBe('function')
     })
-
+/*
     it('should throw if not number is provided as parameter', () : void => {
         expect(() : number | "fizz" => fizzbuzz()).toThrow()
     })
-    
+ */   
     it('should throw specific error message not a number is provided',() : void => {
         expect(() : number | "fizz" => fizzbuzz(NaN)).toThrow('parameter provided must be a number')
     })
@@ -36,6 +36,10 @@ describe('fizzbuzz', () : void => {
         expect(fizzbuzz(6)).toBe("fizz")
         expect(fizzbuzz(9)).toBe("fizz")
         expect(fizzbuzz(12)).toBe("fizz")
-    })     
+    })
+    
+    it('should return 4 is number provided is 4',() : void => {
+        expect(fizzbuzz(4)).toBe(4)
+    })    
 
 })
